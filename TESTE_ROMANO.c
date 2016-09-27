@@ -40,6 +40,14 @@ TEST(CONVERTE_ROMANO, CONVERSAO_DEZENA) {
     EXPECT_EQ (38, CONVERTE_ROMANO("XXXVIII"));
     EXPECT_EQ (75, CONVERTE_ROMANO("LXXV"));
 }
+/** \brief Função responsável por testar a conversão de valores maiores que uma centena e menor que um milhar.*/
+TEST(CONVERTE_ROMANO, CONVERSAO_CENTENA) { 
+    EXPECT_EQ (108, CONVERTE_ROMANO("CVIII"));
+    EXPECT_EQ (204, CONVERTE_ROMANO("CCIV"));
+    EXPECT_EQ (238, CONVERTE_ROMANO("CCXXXVIII"));
+    EXPECT_EQ (552, CONVERTE_ROMANO("DLII"));
+}
+
 
 int main(int argc, char* argv[])
 {
