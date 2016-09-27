@@ -27,6 +27,12 @@ TEST(CONVERTE_ROMANO, CONVERSAO_PADRAO) {
     EXPECT_EQ (500, CONVERTE_ROMANO("D"));
     EXPECT_EQ (1000, CONVERTE_ROMANO("M"));
 }
+/** \brief Função responsável por testar a conversão quando são necessárias subtrações.*/
+TEST(CONVERTE_ROMANO, CONVERSAO_COM_SUBTRACAO) { 
+    EXPECT_EQ (9, CONVERTE_ROMANO("IX"));
+    EXPECT_EQ (59, CONVERTE_ROMANO("LIX"));
+    EXPECT_EQ (900, CONVERTE_ROMANO("CM"));
+}
 
 
 int main(int argc, char* argv[])
