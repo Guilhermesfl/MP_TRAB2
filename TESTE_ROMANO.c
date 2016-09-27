@@ -11,6 +11,13 @@ TEST(VERFICA_ROMANO, VAL_INVALIDO) {
     EXPECT_EQ (-1, VERIFICA_ROMANO("IM"));
     EXPECT_EQ (-1, VERIFICA_ROMANO("IVI"));
 }
+/** \brief Função responsável por testar se valores válidos são reconhecidos pelo programa. */
+TEST(VERIFICA_ROMANO, VAL_VALIDO) { 
+    EXPECT_EQ (0, VERIFICA_ROMANO("XXX"));
+    EXPECT_EQ (0, VERIFICA_ROMANO("XIX"));
+    EXPECT_EQ (0, VERIFICA_ROMANO("LX"));
+    EXPECT_EQ (0, VERIFICA_ROMANO("CCXXXVIII"));
+}
 
 
 int main(int argc, char* argv[])
