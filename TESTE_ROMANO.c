@@ -18,6 +18,15 @@ TEST(VERIFICA_ROMANO, VAL_VALIDO) {
     EXPECT_EQ (0, VERIFICA_ROMANO("LX"));
     EXPECT_EQ (0, VERIFICA_ROMANO("CCXXXVIII"));
 }
+/** \brief Função responsável por testar a conversão de valores padrão sem combinação.*/
+TEST(CONVERTE_ROMANO, CONVERSAO_PADRAO) { 
+    EXPECT_EQ (10, CONVERTE_ROMANO("X"));
+    EXPECT_EQ (1, CONVERTE_ROMANO("I"));
+    EXPECT_EQ (50, CONVERTE_ROMANO("L"));
+    EXPECT_EQ (100, CONVERTE_ROMANO("C"));
+    EXPECT_EQ (500, CONVERTE_ROMANO("D"));
+    EXPECT_EQ (1000, CONVERTE_ROMANO("M"));
+}
 
 
 int main(int argc, char* argv[])
